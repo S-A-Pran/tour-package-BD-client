@@ -22,7 +22,7 @@ const Footer = () => {
     }
 
     return (
-        <div className='footer-bg'>
+        <div className='footer-bg p-2'>
             <div className='footer p-3 text-white d-flex flex-column  flex-lg-row justify-content-center justify-content-lg-evenly align-items-lg-start'>
             <div>
                 <h3>Holiday Guide</h3>
@@ -33,14 +33,14 @@ const Footer = () => {
                 </div>
                 <hr />
                 <div className='fs-2 d-flex justify-content-evenly'>
-                    <span className='bg-white p-1 rounded-circle px-2 text-success'>{masterCard}</span>
-                    <span className='bg-white p-1 rounded-circle px-2 text-info'>{visa}</span> 
-                    <span className='bg-white p-1 rounded-circle px-2 text-primary'>{amazonPay}</span>
-                    <span className='bg-white p-1 rounded-circle px-2 text-dark'>{applePay}</span>
+                    <span className='bg-white p-1 rounded-circle px-3 text-danger'>{masterCard}</span>
+                    <span className='bg-white p-1 rounded-circle px-3 text-info'>{visa}</span> 
+                    <span className='bg-white p-1 rounded-circle px-3 text-primary'>{amazonPay}</span>
+                    <span className='bg-white p-1 rounded-circle px-3 text-dark'>{applePay}</span>
                 </div>
             </div>
             <div>
-                <h3 className='text-decoration-underline'>Navigation</h3>
+                <h3 className=''>Explore More</h3>
                 <div className='d-flex flex-column'>
                 <Link className='link text-decoration-none text-white' to='/home'>Home</Link>
                 <br />
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>     
         </div>
         <hr />
-        <h4 className='text-muted text-center pb-3'>&copy; SAP (2021-2030)</h4>
+        <h4 className='text-muted text-center'>&copy; SAP (2021-2030)</h4>
         </div>
     );
 };

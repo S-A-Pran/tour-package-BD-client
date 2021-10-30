@@ -5,6 +5,9 @@
 .navbar{
     background-color:lightcoral;
 }
+.header{
+    color:lightcoral;
+}
 .link:hover{
     text-decoration: underline;
     color: black !important;
