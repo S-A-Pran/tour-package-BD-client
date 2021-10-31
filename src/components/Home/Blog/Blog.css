@@ -1,0 +1,5 @@
+.card:hover{
+    background-color: lightcoral;
+    color: white;
+    transition: all .5s;
+}

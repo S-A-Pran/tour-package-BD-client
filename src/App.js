@@ -2,6 +2,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AddNewOrder from './components/AddNewOrder/AddNewOrder';
+import AuthProvider from './Context/AuthProvider';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import About from './components/Home/About/About';
@@ -12,10 +13,13 @@ import Login from './components/Home/Login/Login';
 import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div className="">
+      <AuthProvider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -49,12 +53,16 @@ function App() {
           <Route path = '/login'>
             <Login></Login>
           </Route>
+          <PrivateRoute path='/placeorder/:id'>
+            <PlaceOrder></PlaceOrder>
+          </PrivateRoute>
           <Route path = '*'>
             <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
