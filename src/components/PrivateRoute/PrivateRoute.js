@@ -6,13 +6,8 @@ import useAuth from '../../Hook/useAuth';
 
 const PrivateRoute = (props) => {
     const {children, ...rest} = props;
-    const { user, isLoading } = useAuth();
+    const { user } = useAuth();
     console.log(user);
-    const history = useHistory();
-
-    if(isLoading){
-        return <div className="text-center"><Spinner animation="border" variant="danger"></Spinner></div>
-    }
 
     return (
         <div>
